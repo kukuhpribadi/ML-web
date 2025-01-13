@@ -40,13 +40,12 @@ const Header = () => {
       </nav>
       {/* end-navbar */}
       <div className="bg-gray-100">
-        <div className="p-10 lg:py-20 xl:w-[1350px] mx-auto flex justify-between">
-          <div className="flex flex-col gap-3 justify-center">
-            <h1 className="text-6xl font-bold font-serif">
-              Decode Emotions, <br />
-              Understand Expressions
+        <div className="p-10 lg:py-20 xl:w-[1350px] mx-auto">
+          <div className="flex flex-col gap-3 justify-center items-center">
+            <h1 className="text-4xl font-bold font-serif">
+              Decode Emotions, Understand Expressions
             </h1>
-            <div className="flex flex-col items-start gap-10">
+            <div className="lg:w-1/2 flex flex-col items-center gap-10">
               <p className="text-center text-xl">
                 Accurate and Fast Facial Expression Analysis Platform
               </p>
@@ -54,14 +53,6 @@ const Header = () => {
                 Learn More
               </button>
             </div>
-          </div>
-          <div className="h-[500px] rounded-lg border border-black border-r-4 border-b-4 overflow-hidden">
-            <img
-              src="headerImage.jpg"
-              className="h-full w-full object-cover"
-              // style={{ objectPosition: "center -130px" }}
-              alt=""
-            />
           </div>
         </div>
       </div>

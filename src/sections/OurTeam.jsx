@@ -2,7 +2,7 @@ const OurTeam = () => {
   return (
     <div className="flex items-center justify-center py-20 bg-gray-100">
       <div className="xl:w-[1140px] mx-auto">
-        <h2 className="text-center text-2xl font-bold">Our Team</h2>
+        <h2 className="text-center text-3xl font-bold font-serif">Our Team</h2>
         {/* card-wrapper */}
         <div className="mt-14 grid lg:grid-cols-3 gap-10">
           {/* card */}

@@ -97,7 +97,7 @@ const ModelML = () => {
     <div className="flex items-center justify-center py-20">
       <div className="w-[650px] mx-auto">
         {/* right */}
-        <div className="flex flex-col justify-center items-center gap-5 border border-r-4 border-b-4 border-black rounded-lg p-10">
+        <div className="flex flex-col justify-center items-center gap-5 border border-r-4 border-b-4 border-black rounded-lg p-10 bg-white">
           {/* text */}
           <h4 className="font-semibold text-xl">Click image to upload</h4>
           {/* end-text */}
@@ -154,7 +154,7 @@ const ModelML = () => {
           {/* button */}
           <div className="flex flex-col gap-3">
             <button
-              className="bg-gray-300 p-2 px-10 rounded-lg border border-black border-r-4 border-b-4"
+              className="bg-accent p-2 px-10 rounded-lg border border-black border-r-4 border-b-4"
               onClick={() => predict()}
             >
               Check emotion
