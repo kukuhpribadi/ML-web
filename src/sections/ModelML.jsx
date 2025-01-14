@@ -9,7 +9,7 @@ const ModelML = () => {
   const loadModel = async () => {
     try {
       // const loadedModel = await tf.loadLayersModel("/model/model.json");
-      const loadedModel = await tf.loadGraphModel("/model/model.json");
+      const loadedModel = await tf.loadGraphModel("/model_xpresi/model.json");
       setModel(loadedModel);
       console.log("Model berhasil dimuat!");
     } catch (error) {
@@ -40,7 +40,16 @@ const ModelML = () => {
   };
 
   // Daftar label manual
-  const classLabels = ["Cat", "Dog"]; // Label manual, urutan sesuai kelas model
+  const classLabels = [
+    "anger",
+    "contempt",
+    "disgust",
+    "fear",
+    "happy",
+    "neutral",
+    "sad",
+    "surprise",
+  ]; // Label manual, urutan sesuai kelas model
 
   const predict = async (imagePath) => {
     if (!model) {
@@ -60,18 +69,11 @@ const ModelML = () => {
       // Lakukan prediksi
       const prediction = model.predict(normalizedTensor);
 
-      // Ambil nilai mentah prediksi sebagai array
-      const values = await prediction.array();
-
-      // Thresholding: Probabilitas > 0.5 menjadi 1, lainnya 0
-      const thresholdedValues = values[0].map((val) => (val > 0.5 ? 1 : 0));
-
-      // Dapatkan indeks kelas dengan nilai 1
-      const predictionIndex = thresholdedValues.findIndex((val) => val === 1);
+      // Ambil indeks kelas dengan probabilitas tertinggi
+      const predictionIndex = prediction.argMax(1).dataSync()[0];
 
       // Ambil label berdasarkan indeks
-      const predictedLabel = classLabels[thresholdedValues];
-      console.log("Prediksi label:", predictedLabel);
+      const predictedLabel = classLabels[predictionIndex];
 
       // Set hasil prediksi ke state (jika menggunakan React)
       setPredictedLabel(predictedLabel);
