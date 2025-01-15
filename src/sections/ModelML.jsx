@@ -9,7 +9,7 @@ const ModelML = () => {
   const loadModel = async () => {
     try {
       // const loadedModel = await tf.loadLayersModel("/model/model.json");
-      const loadedModel = await tf.loadGraphModel("/model_xpresi/model.json");
+      const loadedModel = await tf.loadGraphModel("/tfjs_model/model.json");
       setModel(loadedModel);
       console.log("Model berhasil dimuat!");
     } catch (error) {
@@ -40,16 +40,7 @@ const ModelML = () => {
   };
 
   // Daftar label manual
-  const classLabels = [
-    "anger",
-    "contempt",
-    "disgust",
-    "fear",
-    "happy",
-    "neutral",
-    "sad",
-    "surprise",
-  ]; // Label manual, urutan sesuai kelas model
+  const classLabels = ["angry", "happy", "sad"]; // Label manual, urutan sesuai kelas model
 
   const predict = async (imagePath) => {
     if (!model) {
