@@ -3,7 +3,13 @@ const Header = () => {
     <div>
       {/* navbar */}
       <nav className="flex justify-between px-20 py-5 border-b-2 border-black">
-        <div className="text-4xl font-bold font-serif">Xpresi.</div>
+        <div className="text-4xl font-bold font-serif">
+          moek
+          <span className="relative">
+            <span className="bg-transparent z-10 relative">ai</span>
+            <span className="absolute bg-accent h-1/2 w-[130%] left-0 bottom-1"></span>
+          </span>
+        </div>
         <div>
           {/* source */}
           <div className="flex gap-5">

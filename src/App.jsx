@@ -1,3 +1,4 @@
+import About from "./sections/About";
 import Footer from "./sections/Footer";
 import Header from "./sections/Header";
 import ModelML from "./sections/ModelML";
@@ -8,6 +9,7 @@ function App() {
     <>
       <Header />
       <ModelML />
+      <About />
       <OurTeam />
       <Footer />
     </>
