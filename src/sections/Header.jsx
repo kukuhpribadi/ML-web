@@ -2,7 +2,7 @@ const Header = () => {
   return (
     <div>
       {/* navbar */}
-      <nav className="flex justify-between px-20 py-5 border-b-2 border-black">
+      <nav className="flex justify-between px-5 lg:px-20 py-5 border-b-2 border-black">
         <div className="text-4xl font-bold font-serif">
           moek
           <span className="relative">
@@ -46,14 +46,15 @@ const Header = () => {
       </nav>
       {/* end-navbar */}
       <div className="bg-gray-100">
-        <div className="p-10 lg:py-20 xl:w-[1350px] mx-auto flex justify-between">
-          <div className="flex flex-col gap-3 justify-center">
-            <h1 className="text-6xl font-bold font-serif">
+        <div className="p-10 lg:py-20 xl:w-[1350px] mx-auto flex flex-col lg:flex-row justify-between gap-5">
+          {/* left */}
+          <div className="order-2 lg:order-1 flex flex-col lg:gap-3 justify-center">
+            <h1 className="text-center lg:text-left text-2xl lg:text-6xl font-bold font-serif">
               Decode Emotions, <br />
               Understand Expressions
             </h1>
-            <div className="flex flex-col items-start gap-10">
-              <p className="text-center text-xl">
+            <div className="flex flex-col items-center lg:items-start gap-5 lg:gap-10">
+              <p className="text-center lg:text-xl">
                 Accurate and Fast Facial Expression Analysis Platform
               </p>
               <button className="bg-accent p-2 px-10 rounded-lg border border-black border-r-4 border-b-4">
@@ -61,14 +62,17 @@ const Header = () => {
               </button>
             </div>
           </div>
-          <div className="h-[500px] rounded-lg border border-black border-r-4 border-b-4 overflow-hidden">
+          {/* end-left */}
+          {/* right */}
+          <div className="order-1 lg:order-2 h-[250px] lg:h-[500px] rounded-lg border border-black border-r-4 border-b-4 overflow-hidden">
             <img
               src="headerImage.jpg"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover object-top"
               // style={{ objectPosition: "center -130px" }}
               alt=""
             />
           </div>
+          {/* end-right */}
         </div>
       </div>
     </div>

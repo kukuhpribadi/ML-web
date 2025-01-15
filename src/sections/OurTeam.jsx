@@ -1,6 +1,6 @@
 const OurTeam = () => {
   return (
-    <div className="flex items-center justify-center py-20">
+    <div className="flex items-center justify-center p-10 lg:py-20">
       <div className="xl:w-[1140px] mx-auto">
         <h2 className="text-center text-3xl font-bold font-serif">Our Team</h2>
         {/* card-wrapper */}

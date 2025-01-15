@@ -1,20 +1,20 @@
 const About = () => {
   return (
     <div className="flex items-center justify-center  bg-gray-50">
-      <div className="mx-auto flex items-center gap-20">
+      <div className="mx-auto flex flex-col lg:flex-row items-center lg:gap-20">
         {/* left */}
-        <div className="w-1/2 h-[500px] overflow-hidden">
+        <div className="lg:w-1/2 h-[300px] lg:h-[500px] overflow-hidden">
           <img
             src="aboutImage.jpg"
-            className="w-full  object-cover object-top mt-[-130px]"
+            className="w-full  object-cover object-top lg:mt-[-130px]"
             alt=""
           />
         </div>
         {/* end-left */}
         {/* right */}
-        <div className="w-1/2">
-          <div className="w-2/3">
-            <h2 className="text-3xl font-bold font-serif">
+        <div className="lg:w-1/2 p-10">
+          <div className="lg:w-2/3">
+            <h2 className="text-center lg:text-left text-3xl font-bold font-serif">
               About{" "}
               <span>
                 moek
@@ -24,7 +24,7 @@ const About = () => {
                 </span>
               </span>
             </h2>
-            <p className="mt-5">
+            <p className="text-center lg:text-left mt-5">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
               voluptate earum omnis, et ad quo delectus expedita fugit facilis
               repellat magnam sit commodi labore ab nihil dicta, officia, eos

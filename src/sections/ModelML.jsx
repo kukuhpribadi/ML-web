@@ -5,6 +5,7 @@ const ModelML = () => {
   const [file, setFile] = useState();
   const [model, setModel] = useState(null);
   const [predictedLabel, setPredictedLabel] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const loadModel = async () => {
     try {
@@ -40,15 +41,17 @@ const ModelML = () => {
   };
 
   // Daftar label manual
-  const classLabels = ["angry", "happy", "sad"]; // Label manual, urutan sesuai kelas model
+  const classLabels = ["Angry", "Happy", "Sad"]; // Label manual, urutan sesuai kelas model
 
-  const predict = async (imagePath) => {
+  const predict = async () => {
     if (!model) {
       alert("Model belum dimuat!");
       return;
     }
 
     try {
+      setIsLoading(true); // Set loading ke true
+      setPredictedLabel(""); // Reset hasil prediksi
       // Muat gambar
       const tensor = await loadImage(file);
 
@@ -79,6 +82,8 @@ const ModelML = () => {
       ]);
     } catch (error) {
       console.error("Error saat melakukan prediksi:", error);
+    } finally {
+      setIsLoading(false); // Set loading ke false setelah selesai
     }
   };
 
@@ -87,8 +92,8 @@ const ModelML = () => {
   }
 
   return (
-    <div className="flex items-center justify-center py-20">
-      <div className="w-[650px] mx-auto">
+    <div className="flex items-center justify-center p-10 lg:py-20">
+      <div className="w-full lg:w-[650px] mx-auto">
         {/* right */}
         <div className="flex flex-col justify-center items-center gap-5 border border-r-4 border-b-4 border-black rounded-lg p-10 bg-white">
           {/* text */}
@@ -141,16 +146,16 @@ const ModelML = () => {
           {/* end-image-preview */}
           {/* text */}
           <h4 className="font-semibold text-xl">
-            {predictedLabel ? predictedLabel : "Result"}
+            {isLoading ? "Loading..." : predictedLabel || "Result"}
           </h4>
           {/* end-text */}
           {/* button */}
           <div className="flex flex-col gap-3">
             <button
               className="bg-accent p-2 px-10 rounded-lg border border-black border-r-4 border-b-4"
-              onClick={() => predict()}
+              onClick={predict}
             >
-              Check emotion
+              {isLoading ? "Processing..." : "Check Emotion"}
             </button>
           </div>
           {/* end-button */}
