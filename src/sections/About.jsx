@@ -13,7 +13,7 @@ const About = () => {
         {/* end-left */}
         {/* right */}
         <div className="lg:w-1/2 p-10">
-          <div className="lg:w-2/3">
+          <div className="lg:w-[80%]">
             <h2 className="text-center lg:text-left text-3xl font-bold font-serif">
               About{" "}
               <span>
@@ -25,18 +25,22 @@ const About = () => {
               </span>
             </h2>
             <p className="text-center lg:text-left mt-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-              voluptate earum omnis, et ad quo delectus expedita fugit facilis
-              repellat magnam sit commodi labore ab nihil dicta, officia, eos
-              sunt! Iusto voluptas aliquid, dolorem quo quibusdam iste porro
-              vitae blanditiis incidunt nemo animi recusandae autem debitis
-              consequuntur molestiae? Perferendis, hic? Nobis non quam sint ut
-              quas eos reprehenderit unde, omnis, consequuntur praesentium sed!
-              Ratione aut laboriosam ab enim tenetur sed voluptate repudiandae
-              eum expedita sunt esse, quos temporibus sint animi alias veritatis
-              similique saepe corporis consectetur nulla incidunt praesentium
-              rerum dignissimos accusamus! Fugiat quas cum itaque expedita! Hic,
-              fuga maiores.
+              <b>"Moekai"</b> you can say <i>muke</i> or <i>moek ai</i> or
+              whatever you want. It means <i>muka</i> in Bahasa or <i>face</i>{" "}
+              in English. <b>Moekai</b> is a model machine learning built with a
+              CNN algorithm for using the detection of human emotion with human
+              face images. You can use this model for some cases like if you
+              online meeting with your friend, you can take a picture of your
+              friend's face and analyze it before you start the conversation, so
+              you can adapt the way you talk to his/her emotions. You can also
+              use it for yourself because some people can't recognize their
+              emotions. In our dream, <b>moekai</b> can be developed and
+              implemented in a smart home, it's will be wonderful if we go back
+              home and open the door, <b>moekai</b> can adjust the light
+              ambiance, adjust the room temperature, and play music
+              recommendations according to our emotions. For now, <b>moekai</b>{" "}
+              is just a simple model to predict emotion using face images but
+              it's possible to be developed to a more advanced step.
             </p>
           </div>
         </div>

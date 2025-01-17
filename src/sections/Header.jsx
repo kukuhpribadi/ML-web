@@ -2,7 +2,8 @@ const Header = () => {
   return (
     <div>
       {/* navbar */}
-      <nav className="flex justify-between px-5 lg:px-20 py-5 border-b-2 border-black">
+      <nav className="flex justify-between items-center px-5 lg:px-20 py-5 border-b-2 border-black">
+        {/* left */}
         <div className="text-4xl font-bold font-serif">
           moek
           <span className="relative">
@@ -10,6 +11,8 @@ const Header = () => {
             <span className="absolute bg-accent h-1/2 w-[130%] left-0 bottom-1"></span>
           </span>
         </div>
+        {/* end-left */}
+        {/* right */}
         <div>
           {/* source */}
           <div className="flex gap-5">
@@ -43,6 +46,7 @@ const Header = () => {
           </div>
           {/* eend-source */}
         </div>
+        {/* end-right */}
       </nav>
       {/* end-navbar */}
       <div className="bg-gray-100">
