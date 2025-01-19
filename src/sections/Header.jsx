@@ -53,7 +53,7 @@ const Header = () => {
         <div className="p-10 lg:py-20 xl:w-[1350px] mx-auto flex flex-col lg:flex-row justify-between gap-5">
           {/* left */}
           <div className="order-2 lg:order-1 flex flex-col lg:gap-3 justify-center">
-            <h1 className="text-center lg:text-left text-2xl lg:text-6xl font-bold font-serif">
+            <h1 className="text-center lg:text-left text-2xl lg:text-5xl font-bold font-serif">
               Decode Emotions, <br />
               Understand Expressions
             </h1>
@@ -70,7 +70,7 @@ const Header = () => {
           {/* right */}
           <div className="order-1 lg:order-2 h-[250px] lg:h-[500px] rounded-lg border border-black border-r-4 border-b-4 overflow-hidden">
             <img
-              src="headerImage.jpg"
+              src="image1.jpg"
               className="h-full w-full object-cover object-top"
               // style={{ objectPosition: "center -130px" }}
               alt=""

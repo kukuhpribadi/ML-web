@@ -1,12 +1,12 @@
 const About = () => {
   return (
-    <div className="flex items-center justify-center  bg-gray-50">
+    <div className="flex items-center justify-center  bg-gray-50 ">
       <div className="mx-auto flex flex-col lg:flex-row items-center lg:gap-20">
         {/* left */}
-        <div className="lg:w-1/2 h-[300px] lg:h-[500px] overflow-hidden">
+        <div className="lg:w-1/2 h-[300px] lg:h-[550px] overflow-hidden">
           <img
-            src="aboutImage.jpg"
-            className="w-full  object-cover object-top lg:mt-[-130px]"
+            src="image2.jpg"
+            className="w-full  object-cover object-top "
             alt=""
           />
         </div>
@@ -27,20 +27,19 @@ const About = () => {
             <p className="text-center lg:text-left mt-5">
               <b>"Moekai"</b> you can say <i>muke</i> or <i>moek ai</i> or
               whatever you want. It means <i>muka</i> in Bahasa or <i>face</i>{" "}
-              in English. <b>Moekai</b> is a model machine learning built with a
-              CNN algorithm for using the detection of human emotion with human
-              face images. You can use this model for some cases like if you
-              online meeting with your friend, you can take a picture of your
-              friend's face and analyze it before you start the conversation, so
-              you can adapt the way you talk to his/her emotions. You can also
-              use it for yourself because some people can't recognize their
-              emotions. In our dream, <b>moekai</b> can be developed and
-              implemented in a smart home, it's will be wonderful if we go back
-              home and open the door, <b>moekai</b> can adjust the light
-              ambiance, adjust the room temperature, and play music
-              recommendations according to our emotions. For now, <b>moekai</b>{" "}
-              is just a simple model to predict emotion using face images but
-              it's possible to be developed to a more advanced step.
+              in English. Moekai is a model machine learning built with a CNN
+              algorithm for using the detection of human emotion with human face
+              images. You can use this model for some cases like if you online
+              meeting with your friend, you can take a picture of your friend's
+              face and analyze it before you start the conversation, so you can
+              adapt the way you talk to his/her emotions. You can also use it
+              for yourself because some people can't recognize their emotions.
+              In our dream, moekai can be developed and implemented in a smart
+              home, it's will be wonderful if we go back home and open the door,
+              moekai can adjust the light ambiance, adjust the room temperature,
+              and play music recommendations according to our emotions. For now,
+              moekai is just a simple model to predict emotion using face images
+              but it's possible to be developed to a more advanced step.
             </p>
           </div>
         </div>

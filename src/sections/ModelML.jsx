@@ -93,7 +93,7 @@ const ModelML = () => {
 
   return (
     <div className="flex items-center justify-center p-10 lg:py-20">
-      <div className="w-full lg:w-[650px] mx-auto">
+      <div className="w-full lg:w-[500px] mx-auto">
         {/* right */}
         <div className="flex flex-col justify-center items-center gap-5 border border-r-4 border-b-4 border-black rounded-lg p-10 bg-white">
           {/* text */}
